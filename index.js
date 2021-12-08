@@ -33,8 +33,8 @@ const startUpdateLoop = (initPollInterval = config.current.POLL_INTERVAL) => {
   log(
     endent`
       ${initialPollInterval ? 'Initialized with' : 'Updated to'} ${chalk.blue(
-      'POLL_INTERVAL',
-    )} of ${chalk.blue(friendlyPollInterval)} seconds.`,
+      'POLL_INTERVAL'
+    )} of ${chalk.blue(friendlyPollInterval)} seconds.`
   )
   initialPollInterval = false
 
@@ -72,7 +72,7 @@ const startUpdateLoop = (initPollInterval = config.current.POLL_INTERVAL) => {
       }
     } catch (err) {
       console.error(err)
-      return process.exit(1)
+      // return process.exit(1)
     }
   }, initPollInterval)
 }
@@ -88,7 +88,7 @@ const startProcess = () => {
     endent`
       Spawning process:
         ${chalk.blue([node, ...args].join(' '))}
-    `,
+    `
   )
   return spawn(node, args, {
     stdio: 'inherit',
