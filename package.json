@@ -1,13 +1,13 @@
 {
   "name": "autoupdate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
     "autoupdate": "index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "standard-version"
   },
   "keywords": [],
   "author": "10hendersonm",
@@ -16,5 +16,8 @@
     "chalk": "^4.1.2",
     "cosmiconfig": "^7.0.1",
     "endent": "^2.1.0"
+  },
+  "devDependencies": {
+    "standard-version": "^9.3.2"
   }
 }
